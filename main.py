@@ -4,7 +4,7 @@ import base64,os,requests,random, urllib.request
 from PIL import Image
 cwd = os.getcwd()
 imgbb = "https://api.imgbb.com/1/upload"
-imgkey = "3b9a49b18471666b2f5055807081450b"
+imgkey = "<IMGBB API KEY>"
 datas = {
     "key": imgkey,
 }
@@ -137,7 +137,7 @@ app = Flask(__name__)
 @app.route('/generate', methods=['POST'])
 def generate():
     data = request.get_json()  # Get JSON data sent to the endpoint
-    if request.headers["auth"] == "poop123":
+    if request.headers["auth"] == "bop123!":
         prompt = data.get('prompt', '')  # Extract the 'prompt' parameter
         style = data.get('style', '')
         print(prompt)
